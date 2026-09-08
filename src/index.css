@@ -1,0 +1,73 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-warm-white: #FAF9F6;
+  --color-pastel-blue: #EBFDFF;
+  --color-charcoal: #171717;
+  --color-muted: #6B6B6B;
+  --color-white: #FFFFFF;
+
+  /* Fonts */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  /* Type scale (mobile-first, scales up via clamp) */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.06rem + 0.3vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.6rem + 1.3vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 1.85rem + 2vw, 3.25rem);
+  --text-5xl: clamp(2.75rem, 2.1rem + 3vw, 4.25rem);
+
+  /* Spacing foundation
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 4rem;
+  --spacing-2xl: 6rem; */
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Shadows (subtle, restrained) */
+  --shadow-sm: 0 1px 2px rgba(23, 23, 23, 0.05);
+  --shadow-md: 0 4px 12px rgba(23, 23, 23, 0.06);
+}
+
+@layer base {
+  body {
+    margin: 0;
+    background: var(--color-warm-white);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-charcoal);
+    outline-offset: 2px;
+  }
+}
