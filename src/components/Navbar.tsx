@@ -64,8 +64,8 @@ function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="mt-2 rounded-md bg-charcoal px-5 py-3 text-center font-sans text-sm text-white">
-            Book Us
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="mt-3 border-b border-charcoal pb-1 w-fit font-sans text-sm text-charcoal">
+            Say hello
           </a>
         </nav>
       )}
